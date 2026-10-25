@@ -1,5 +1,7 @@
 # dsh-im-style-fatfish
 
+**在 DSH 里，像 IM 一样和大肥鱼聊天。**
+
 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的聊天界面加一只**大肥鱼**：
 助手回复旁边挂一个圆形头像，干活时是「思考」，这一轮结束之后由一次小模型调用从表情库里挑一张最贴的。
 

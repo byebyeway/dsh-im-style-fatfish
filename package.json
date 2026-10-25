@@ -1,7 +1,7 @@
 {
   "name": "dsh-im-style-fatfish",
   "version": "0.1.0",
-  "description": "给 DSH 聊天加大肥鱼头像：干活时思考，结束后由模型从表情库里挑一个",
+  "description": "在 DSH 里像 IM 一样和大肥鱼聊天：头像挂在对话栏外侧，干活时思考，轮次结束由模型挑一张表情",
   "type": "module",
   "main": "lib/index.js",
   "exports": {

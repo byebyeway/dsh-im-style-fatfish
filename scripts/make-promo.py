@@ -102,17 +102,16 @@ def hero():
     img.alpha_composite(ring, (140 - 90, 320 - ring.height // 2))
 
     x = 560
-    draw.text((x, 132), "DEEPSEEK HARNESS PLUGIN", font=font(FONT_MONO, 24), fill=MUTED)
-    draw.text((x, 158), "大肥鱼头像", font=font(FONT_BD, 100), fill=INK)
-    draw.text((x, 292), "dsh-im-style-fatfish", font=font(FONT_MONO, 34), fill=ACCENT)
-
-    lines = ["头像挂在对话栏外侧，正文一点不让位", "干活时「思考」，轮次结束由模型挑一张表情"]
-    for i, line in enumerate(lines):
-        draw.text((x, 352 + i * 52), line, font=font(FONT_RG, 30), fill=DEEP)
+    draw.text((x, 112), "DEEPSEEK HARNESS PLUGIN", font=font(FONT_MONO, 24), fill=MUTED)
+    draw.text((x, 142), "大肥鱼头像", font=font(FONT_BD, 96), fill=INK)
+    draw.text((x, 268), "在 DSH 里，像 IM 一样和大肥鱼聊天", font=font(FONT_BD, 32), fill=INK)
+    draw.text((x, 330), "dsh-im-style-fatfish", font=font(FONT_MONO, 28), fill=ACCENT)
+    draw.text((x, 382), "头像挂在对话栏外侧 · 干活时「思考」 · 轮次结束换一张表情",
+              font=font(FONT_RG, 24), fill=MUTED)
 
     cx = x
     for label in ("离线可用", "12 种表情", "MIT"):
-        cx += chip(draw, cx, 470, label, font(FONT_RG, 24)) + 14
+        cx += chip(draw, cx, 444, label, fnt=font(FONT_RG, 24)) + 14
 
     draw.text((w - 40, h - 46), "github.com/byebyeway/dsh-im-style-fatfish",
               font=font(FONT_MONO, 20), fill=MUTED, anchor="rs")

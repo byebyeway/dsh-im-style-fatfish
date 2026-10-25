@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Fatfish Avatar",
-    "description": "Adds a Fatfish avatar beside assistant replies: thinking while it works, then an expression picked from the meme library when the turn ends."
+    "description": "Chat with Fatfish like an IM app inside DeepSeek Harness: a round avatar hangs outside the chat column, thinks while working, and swaps expression when the turn ends."
   }
 }
