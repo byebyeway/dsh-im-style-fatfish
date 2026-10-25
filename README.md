@@ -1,5 +1,8 @@
 # dsh-im-style-fatfish
 
+[![npm](https://img.shields.io/npm/v/dsh-im-style-fatfish)](https://www.npmjs.com/package/dsh-im-style-fatfish)
+[![license](https://img.shields.io/npm/l/dsh-im-style-fatfish)](LICENSE)
+
 **在 DSH 里，像 IM 一样和大肥鱼聊天。**
 
 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的聊天界面加一只**大肥鱼**：
@@ -31,28 +34,23 @@
 
 ## 安装
 
-**插件页**：打开 DSH 的 **插件 → 添加插件**，填本地绝对路径：
-
-```text
-C:\Users\<你>\Documents\deepseek-harness\default-workspace\plugins\dsh-im-style-fatfish
-```
-
-**命令行**：
+**一行装**（已发布到 npm）：
 
 ```bash
-# 本地目录
-dsh plugin add C:\path\to\dsh-im-style-fatfish
-
-# 发布到 npm 之后
 dsh plugin add dsh-im-style-fatfish
 ```
 
-**从 GitHub 拿**：
+也可以打开 DSH 的 **插件 → 添加插件**，在输入框里填 `dsh-im-style-fatfish`。
+
+**从 GitHub 装**（想跟最新代码）：
 
 ```bash
 git clone https://github.com/byebyeway/dsh-im-style-fatfish
 dsh plugin add ./dsh-im-style-fatfish
 ```
+
+**本地目录**：在 **插件 → 添加插件** 里填绝对路径，例如
+`C:\Users\<你>\Documents\deepseek-harness\default-workspace\plugins\dsh-im-style-fatfish`。
 
 装完在插件页确认「大肥鱼头像」已启用，刷新一次页面。
 
