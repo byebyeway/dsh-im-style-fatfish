@@ -146,60 +146,9 @@ def faces_grid():
     img.convert("RGB").save(DOCS / "faces.png", optimize=True)
 
 
-def mock_chat():
-    """Illustration of the layout, drawn from the plugin's own CSS values."""
-    w, h = 1200, 500
-    img = Image.new("RGB", (w, h), (242, 245, 250))
-    draw = ImageDraw.Draw(img)
-
-    win = (36, 36, w - 36, h - 36)
-    draw.rounded_rectangle(win, radius=20, fill=(255, 255, 255), outline=(226, 233, 244), width=2)
-
-    body = font(FONT_RG, 21)
-    name_f = font(FONT_RG, 17)
-    column_x, right = 340, 1040
-
-    def wrapped(x, y, text, fnt, fill, width):
-        line, out = "", []
-        for ch in text:
-            if draw.textlength(line + ch, font=fnt) > width:
-                out.append(line)
-                line = ch
-            else:
-                line += ch
-        out.append(line)
-        for i, part in enumerate(out):
-            draw.text((x, y + i * 34), part, font=fnt, fill=fill)
-        return y + len(out) * 34
-
-    # user turn, right aligned
-    bubble_text = "插件装好了，表情能换吗"
-    bw = draw.textlength(bubble_text, font=body) + 40
-    draw.rounded_rectangle((right - bw, 92, right, 92 + 56), radius=16, fill=(232, 240, 255))
-    draw.text((right - bw + 20, 92 + 15), bubble_text, font=body, fill=(28, 47, 80))
-
-    def assistant(y, face_id, name_shown, text, running=False):
-        art = avatar(face_id, 64)
-        img.paste(art, (column_x - 64 - 14, y), art)
-        draw.text((column_x, y + 4), name_shown, font=name_f, fill=(138, 143, 152))
-        bottom = wrapped(column_x, y + 30, text, body, (24, 32, 46), right - column_x)
-        return bottom + 54
-
-    y = assistant(196, "rice",
-                  "大肥鱼",
-                  "装了 12 张表情，判定只有两条：干活时固定「思考」，这轮结束再由模型挑一张。")
-
-    y = assistant(y, "think",
-                  "大肥鱼 · 运行中",
-                  "我先看一下你现在的窗口宽度，够不够把头像挂到对话栏外面。")
-
-    img.convert("RGB").save(DOCS / "preview-mock.png", optimize=True)
-
-
 if __name__ == "__main__":
     hero()
     faces_grid()
-    mock_chat()
-    for name in ("hero.png", "faces.png", "preview-mock.png"):
+    for name in ("hero.png", "faces.png"):
         path = DOCS / name
         print(name, Image.open(path).size, f"{path.stat().st_size / 1024:.0f} KB")
