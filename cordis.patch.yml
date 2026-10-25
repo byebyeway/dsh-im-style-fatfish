@@ -1,0 +1,5 @@
+# dsh-im-style-fatfish：一行插件，插进 profile 的空根。
+# 之后在「插件」页里用开关启用/停用；配置写在 profile 的 cordis.patch.yml 里覆盖本行。
+- insert:
+    - id: im-style-fatfish
+      name: dsh-im-style-fatfish

@@ -1,0 +1,60 @@
+{
+  "name": "dsh-im-style-fatfish",
+  "version": "0.1.0",
+  "description": "给 DSH 聊天加大肥鱼头像：干活时思考，结束后由模型从表情库里挑一个",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "avatar",
+    "emoticon",
+    "fatfish",
+    "大肥鱼"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byebyeway/dsh-im-style-fatfish.git"
+  },
+  "homepage": "https://github.com/byebyeway/dsh-im-style-fatfish#readme",
+  "bugs": {
+    "url": "https://github.com/byebyeway/dsh-im-style-fatfish/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "license": "MIT"
+}
