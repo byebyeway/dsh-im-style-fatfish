@@ -3,6 +3,8 @@
 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的聊天界面加一只**大肥鱼**：
 助手回复旁边挂一个圆形头像，干活时是「思考」，这一轮结束之后由一次小模型调用从表情库里挑一张最贴的。
 
+![dsh-im-style-fatfish](docs/hero.png)
+
 > **素材声明**：本插件不画任何表情。`assets/faces/` 里那 12 张图全部来自 npm 包
 > [`dsh-meme`](https://www.npmjs.com/package/dsh-meme)（MIT）内置的 `dafeiyu-001` 大肥鱼图库，
 > 为离线可用而 vendor 进本仓库。逐张的源路径记在 [NOTICE.md](NOTICE.md)，图库本身的版权与
@@ -14,6 +16,10 @@
 装了 `dsh-meme` 也能同时用，两个互不冲突；没装也不影响，图已经在 `assets/faces/` 里。
 
 ## 效果
+
+![布局示意](docs/preview-mock.png)
+
+<sub>示意图：按插件实际 CSS 绘制，不是实机截图。头像是 64px，挂在对话栏左侧外面，正文从栏边开始。</sub>
 
 - **宽屏（≥1112px）**：头像挂在对话栏**左侧外面**那块空白里，默认 64px，正文一点不让位，IM 那种「头像在气泡外面」的感觉。
 - **窄屏**：没有空白可用，退回 44px 贴在正文左侧。
@@ -61,6 +67,8 @@ dsh plugin add ./dsh-im-style-fatfish
 历史消息不补判：没有缓存就显示 `rice`。
 
 ## 表情
+
+![12 种表情](docs/faces.png)
 
 | id | 倾向 | 图 |
 |---|---|---|
